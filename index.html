@@ -1275,6 +1275,14 @@
             }
         });
 
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                audio?.pause();
+            } else {
+                audio?.play();
+            }
+        });
+
         document.cookie = "username=John Doe; SameSite=Lax; Secure";
     </script>
 
